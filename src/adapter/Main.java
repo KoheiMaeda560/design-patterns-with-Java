@@ -7,6 +7,9 @@ public class Main {
 		p.printWeak();
 		p.printStrong();
 
+		PrintWithForwarding p2 = new PrintBannerWithForwarding("Hello");
+		p2.printWeak();
+		p2.printStrong();
 
 	}
 
