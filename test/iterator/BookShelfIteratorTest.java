@@ -14,10 +14,8 @@ class BookShelfIteratorTest {
     @BeforeEach
     void setUp() {
         bookShelf = new BookShelf(2);
-        Book book1 = new Book();
-        book1.setName("Effective Java");
-        Book book2 = new Book();
-        book2.setName("Java Concurrency in Practice");
+        Book book1 = new Book("Effective Java");
+        Book book2 = new Book("Java Concurrency in Practice");
         bookShelf.appendBook(book1);
         bookShelf.appendBook(book2);
     }

@@ -11,8 +11,7 @@ class BookShelfTest {
     @Test
     void testAppendBookAndGetBookAt() {
         BookShelf bookShelf = new BookShelf(5);
-        Book book1 = new Book();
-        book1.setName("Design Patterns");
+        Book book1 = new Book("Design Patterns");
 
         bookShelf.appendBook(book1);
 
@@ -24,17 +23,16 @@ class BookShelfTest {
         BookShelf bookShelf = new BookShelf(5);
         assertEquals(0, bookShelf.getLength(), "BookShelf should initially be empty");
 
-        bookShelf.appendBook(new Book());
+        bookShelf.appendBook(new Book("Effective Java"));
         assertEquals(1, bookShelf.getLength(), "BookShelf length should be 1 after adding a book");
     }
 
     @Test
     void testIterator() {
         BookShelf bookShelf = new BookShelf(3);
-        Book book1 = new Book();
-        book1.setName("Clean Code");
-        Book book2 = new Book();
-        book2.setName("Refactoring");
+        Book book1 = new Book("Clean Code");
+        Book book2 = new Book("Refactoring");
+
 
         bookShelf.appendBook(book1);
         bookShelf.appendBook(book2);

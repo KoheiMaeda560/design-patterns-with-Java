@@ -8,7 +8,7 @@ class BookTest {
 
     @Test
     void testSetNameAndGetName() {
-        Book book = new Book();
+        Book book = new Book("");
         book.setName("Effective Java");
 
         assertEquals("Effective Java", book.getName(), "Book name should be set and retrieved correctly");
